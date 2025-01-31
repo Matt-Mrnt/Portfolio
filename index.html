@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthias Marnat-Gourves</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+</head>
+<body>
+    <div class="container">
+        <section class="header">
+            <div class="image">
+                <img src="image/logo-black.png" alt="" id="logo">
+            </div>
+            <nav class="menu">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Social</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">hhhhh</a></li>
+            </ul>
+            </nav>
+            <div class="theme">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </div>
+            <i class="fa fa-bars"></i>
+        </section>
+        <section class="info">
+            <div class="text-info">
+                <h2>Qui suis-je ?</h2>
+                <p>Je suis Matthias Marnat-Gourves, diplômé d'un BUT Métiers du Multimédia et de l'Internet, spécialisé en création numérique. Bien que le développement web, notamment en HTML, CSS et un petit peu de JavaScript, ne soit pas ma spécialité, je me concentre principalement sur la création graphique, en 2D et 3D, ainsi que le montage photo et vidéo. Vous pourrez découvrir mes réalisations plus bas, si cela vous intéresse.</p>
+                <ul>
+                    <li>Email : <a href="mailto:matt.tanram@gmail.com">matt.tanram@gmail.com</a></li>
+                    <li>Téléphone : <a href="tel:+33669485158">+33 669485158</a></li>
+                </ul>
+            </div>
+            <!-- Image ajoutée à droite -->
+            <div class="photo">
+                <img src="image/photo/interesting.jpg" alt="Photo de profil">
+            </div>
+        </section>
+        <section class="social-links">
+            <div class="container text-center">
+                <h2>Mes réseaux sociaux</h2>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/matthias-marnat/" target="_blank" class="social-icon linkedin">LinkedIn</a>
+                    <a href="https://www.behance.net/matt_marnat-gourves" target="_blank" class="social-icon behance">Behance</a>
+                    <a href="https://github.com/Matt-Mrnt" target="_blank" class="social-icon github">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="hero">
+            <div class="swiper myswiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="image/projets/P1.jpg" alt="">
+                            <div class="content">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <p>Modeling-2022</p>
+                                <h1>Vector</h1>
+                                <h2>Art</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="image/projets/P2.jpg" alt="">
+                            <div class="content">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <p>Modeling-2022</p>
+                                <h1>Vector</h1>
+                                <h2>Art</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="image/projets/P3.png" alt="">
+                            <div class="content">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <p>Modeling-2022</p>
+                                <h1>Vector</h1>
+                                <h2>Art</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="image/projets/P4.jpg" alt="">
+                            <div class="content">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <p>Modeling-2022</p>
+                                <h1>Vector</h1>
+                                <h2>Art</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="image/projets/P5.png" alt="">
+                            <div class="content">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <p>Modeling-2022</p>
+                                <h1>Vector</h1>
+                                <h2>Art</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <img src="image/projets/P6.png" alt="">
+                            <div class="content">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                <p>Modeling-2022</p>
+                                <h1>Vector</h1>
+                                <h2>Art</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angle-right swiper-button-next"></i>
+                <i class="fa-solid fa-angle-left swiper-button-prev"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let bars = document.querySelector(".header .fa-bars")
+        let menu = document.querySelector("ul");
+
+
+        bars.addEventListener("click",function(){
+            menu.classList.toggle("slide");
+        })
+
+
+
+    </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+
+var swiper = new Swiper(".myswiper",{
+    spaceBetween: 30,
+    freeMode:true,
+    loop:true,
+    autoplay:{
+        delay:2000
+    },
+    breakpoints:{
+        640:{
+            slidesPerView:1,
+            spaceBetween: 20
+        },
+        768:{
+            slidesPerView:2,
+            spaceBetween: 30
+        },
+        1080:{
+            slidesPerView:3,
+            spaceBetween: 40
+        }
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+
+})
+
+</script>
+
+<script>
+
+    let body = document.querySelector("body");
+
+    let dark = document.querySelector(".theme .fa-moon");
+    let light = document.querySelector(".theme .fa-sun");
+
+    let logo = document.querySelector("#logo");
+
+
+    dark.addEventListener("click",function(){
+        body.classList.toggle("darkMode");
+        logo.setAttribute("src","images/logo.png");
+        dark.style.display="none";
+        light.style.display="block";
+    })
+    light.addEventListener("click",function(){
+        body.classList.toggle("darkMode");
+        logo.setAttribute("src","images/logo-black.png");
+        dark.style.display="block";
+        light.style.display="none";
+    })
+
+
+</script>
+<footer>
+    <div class="footer">
+        <p>&copy; 2025 Mon Portfolio - Tous droits réservés</p>
+    </div>
+</footer>
+
+</body>
+</html>
