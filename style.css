@@ -35,7 +35,7 @@ body{
     border-radius: 50vw; /* Arrondi complet pour créer une pilule */
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: justify;
     margin: 2vh auto; /* Centrer horizontalement et donner un espace en haut */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une ombre */
@@ -78,7 +78,9 @@ i{
 .header .fa-sun{
     display: none;
 }
-
+.container{
+    margin-left: 10%;
+}
 a{
     text-decoration: none;
 }
@@ -164,7 +166,6 @@ a{
 .card img{
     height: 100%;
     width: 100%;
-    
     align-self: center;
     transform: scale(0.9);
     transition: .6s;
@@ -251,6 +252,10 @@ a{
     overflow-y: auto;
     z-index: 1000;
 }
+.project-detail-img {
+    max-width: 100%;
+    max-height: 100%;
+}
 .close-btn {
     background-color: transparent;
     border: none;
@@ -272,7 +277,7 @@ footer {
     padding-bottom: 1%;
 }
 
-@media(max-width:1100px){
+/* @media(max-width:1100px){
     .hero{
         min-height: 670px;
     }
@@ -304,5 +309,171 @@ footer {
 @media(max-width:900px){
     .hero{
         min-height: 666px;
+    }
+}
+
+/* ========== Écrans larges (1200px et plus) ========== */
+@media (min-width: 1200px) {
+    .header {
+        width: 70%;
+        font-size: 1.8rem;
+    }
+    .info {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .text-info {
+        max-width: 600px;
+    }
+    .photo img {
+        max-width: 400px;
+    }
+    
+}
+
+/* ========== Tablettes et petits écrans (900px - 1199px) ========== */
+@media (max-width: 1199px) {
+    .header {
+        width: 85%;
+        font-size: 1.4rem;
+    }
+    .info {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-info {
+        max-width: 80%;
+    }
+    .photo img {
+        max-width: 350px;
+    }
+    .hero{
+        min-height: 670px;
+    }
+    .header .fa-bars{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        z-index: 1000;
+        border-bottom: 2px solid var(--border-color);
+        width: 100%;
+        transition: .6s;
+        background-color: var(--color1);
+    }
+    ul li{
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .slide{
+        left: 0;
+    }
+    .card img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+/* ========== Mobiles larges (600px - 899px) ========== */
+@media (max-width: 899px) {
+    .header {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+    .header .fa-bars {
+        display: block;
+    }
+    
+    .info {
+        flex-direction: column;
+        padding-top: 12%;
+    }
+    .photo img {
+        max-width: 300px;
+    }
+    .hero{
+        min-height: 670px;
+    }
+    .header .fa-bars{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        z-index: 1000;
+        border-bottom: 2px solid var(--border-color);
+        width: 100%;
+        transition: .6s;
+        background-color: var(--color1);
+    }
+    ul li{
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .slide{
+        left: 0;
+    }
+    .card img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+/* ========== Mobiles standards (moins de 600px) ========== */
+@media (max-width: 599px) {
+    .header {
+        width: 95%;
+        font-size: 1rem;
+        height: auto;
+    }
+    .header .fa-bars {
+        display: block;
+    }
+    
+    .info {
+        padding-top: 15%;
+    }
+    .text-info {
+        max-width: 90%;
+    }
+    .photo img {
+        max-width: 250px;
+    }
+    .social-links {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .hero{
+        min-height: 670px;
+    }
+    .header .fa-bars{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        top: 100%;
+        left: -120%;
+        z-index: 1000;
+        border-bottom: 2px solid var(--border-color);
+        width: 100%;
+        transition: .6s;
+        background-color: var(--color1);
+    }
+    ul li{
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .slide{
+        left: 0;
+    }
+    .card img{
+        height: 100%;
+        width: auto;
     }
 }
