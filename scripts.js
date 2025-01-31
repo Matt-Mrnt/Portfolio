@@ -23,3 +23,33 @@ nextBtn.addEventListener('click', () => {
         updateCarousel();
     }
 });
+
+// === Gestion des projets ===
+const card = document.querySelectorAll('.card');
+const closeBtns = document.querySelectorAll('.close-btn');
+
+card.forEach((box) => {
+    box.addEventListener('click', () => {
+        const projectId = box.id;
+        const detailBox = document.getElementById(`${projectId}-detail`);
+        detailBox.style.display = 'block';
+    });
+});
+
+closeBtns.forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+        const detailBox = btn.closest('.project-detail');
+        detailBox.style.display = 'none';
+        event.stopPropagation();
+    });
+});
+
+// Fermer les détails en cliquant à l'extérieur
+window.addEventListener('click', (event) => {
+    const detailBoxes = document.querySelectorAll('.project-detail');
+    detailBoxes.forEach((detail) => {
+        if (event.target === detail) {
+            detail.style.display = 'none';
+        }
+    });
+});

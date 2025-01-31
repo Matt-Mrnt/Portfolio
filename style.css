@@ -152,6 +152,7 @@ a{
 }
 
 .card{
+    max-height: 440px;
     height: 55vh;
     width: 100%;
     position: relative;
@@ -175,7 +176,7 @@ a{
     width: 100%;
     top: 0;
     color: #fff;
-    padding-top: 84%;
+    padding-top: 0%;
     padding-left: 8%;
     transition: .6s;
     opacity: 0;
@@ -234,6 +235,33 @@ a{
     color: var(--color1);
 }
 
+.project-detail {
+    display: none;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 85%;
+    background-color: rgba(169, 37, 37, 1);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 1000;
+}
+.close-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
 /* ========== Footer ========== */
 footer {
     background-color: var(--color1);
@@ -254,8 +282,8 @@ footer {
     ul{
         position: absolute;
         top: 100%;
-        left: -100%;
-        z-index: 99;
+        left: -120%;
+        z-index: 1000;
         border-bottom: 2px solid var(--border-color);
         width: 100%;
         transition: .6s;

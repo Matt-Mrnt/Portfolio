@@ -10,10 +10,7 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
 </head>
 <body>
@@ -63,10 +60,11 @@
 
 
         <div class="hero">
+            <a>Quelques affiches et posters</a>
             <div class="swiper myswiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" id="project1">
                             <img src="image/projets/P1.jpg" alt="">
                             <div class="content">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -77,7 +75,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" id="project2">
                             <img src="image/projets/P2.jpg" alt="">
                             <div class="content">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -88,7 +86,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" id="project3">
                             <img src="image/projets/P3.png" alt="">
                             <div class="content">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -99,7 +97,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" id="project4">
                             <img src="image/projets/P4.jpg" alt="">
                             <div class="content">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -110,7 +108,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" id="project5">
                             <img src="image/projets/P5.png" alt="">
                             <div class="content">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -121,7 +119,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="card">
+                        <div class="card" id="project6">
                             <img src="image/projets/P6.png" alt="">
                             <div class="content">
                                 <i class="fa-solid fa-arrow-up"></i>
@@ -137,6 +135,44 @@
             </div>
         </div>
     </div>
+
+        <!-- Détail de projet -->
+    <div class="project-detail" id="project1-detail">
+        <button class="close-btn" id="close-project1">&times;</button>
+        <h2>Projet 1 - Détails</h2>
+        <p>Description du projet 1...</p>
+        <img src="image/projets/P1.jpg" alt="Détails du projet 1">
+      </div>
+      <div class="project-detail" id="project2-detail">
+        <button class="close-btn" id="close-project1">&times;</button>
+        <h2>Projet 2 - Détails</h2>
+        <p>Description du projet 1...</p>
+        <img src="image/projets/P2.jpg" alt="Détails du projet 2">
+      </div>
+      <div class="project-detail" id="project3-detail">
+        <button class="close-btn" id="close-project1">&times;</button>
+        <h2>Projet 3 - Détails</h2>
+        <p>Description du projet 1...</p>
+        <img src="image/projets/P3.png" alt="Détails du projet 3">
+      </div>
+      <div class="project-detail" id="project4-detail">
+        <button class="close-btn" id="close-project1">&times;</button>
+        <h2>Projet 4 - Détails</h2>
+        <p>Description du projet 1...</p>
+        <img src="image/projets/P4.jpg" alt="Détails du projet 4">
+      </div>
+      <div class="project-detail" id="project5-detail">
+        <button class="close-btn" id="close-project1">&times;</button>
+        <h2>Projet 5 - Détails</h2>
+        <p>Description du projet 1...</p>
+        <img src="image/projets/P5.png" alt="Détails du projet 5">
+      </div>
+      <div class="project-detail" id="project6-detail">
+        <button class="close-btn" id="close-project1">&times;</button>
+        <h2>Projet 6 - Détails</h2>
+        <p>Description du projet 1...</p>
+        <img src="image/projets/P6.png" alt="Détails du projet 6">
+      </div>
 
     <script>
 
@@ -213,6 +249,38 @@ var swiper = new Swiper(".myswiper",{
 
 
 </script>
+
+<script>// === Gestion des projets ===
+    const card = document.querySelectorAll('.card');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    
+    card.forEach((box) => {
+        box.addEventListener('click', () => {
+            const projectId = box.id;
+            const detailBox = document.getElementById(`${projectId}-detail`);
+            detailBox.style.display = 'block';
+        });
+    });
+    
+    closeBtns.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+            const detailBox = btn.closest('.project-detail');
+            detailBox.style.display = 'none';
+            event.stopPropagation();
+        });
+    });
+    
+    // Fermer les détails en cliquant à l'extérieur
+    window.addEventListener('click', (event) => {
+        const detailBoxes = document.querySelectorAll('.project-detail');
+        detailBoxes.forEach((detail) => {
+            if (event.target === detail) {
+                detail.style.display = 'none';
+            }
+        });
+    });
+    </script>
+
 <footer>
     <div class="footer">
         <p>&copy; 2025 Mon Portfolio - Tous droits réservés</p>
