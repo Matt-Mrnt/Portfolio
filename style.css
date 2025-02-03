@@ -380,7 +380,7 @@ footer {
 /* ========== Mobiles larges (600px - 899px) ========== */
 @media (max-width: 899px) {
     .header {
-        width: 90%;
+        width: 80%;
         font-size: 1.2rem;
     }
     .header .fa-bars {
@@ -427,7 +427,7 @@ footer {
 /* ========== Mobiles standards (moins de 600px) ========== */
 @media (max-width: 599px) {
     .header {
-        width: 95%;
+        width: 80%;
         font-size: 1rem;
         height: auto;
     }
