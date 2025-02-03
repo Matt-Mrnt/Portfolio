@@ -446,6 +446,7 @@ footer {
     .text-info {
         max-width: 90%;
         text-align: center;
+        margin-left: 5%;
     }
     .photo img {
         max-width: 250px;
