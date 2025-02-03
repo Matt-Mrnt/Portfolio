@@ -79,7 +79,7 @@ i{
     display: none;
 }
 .container{
-    margin-left: 10%;
+    
 }
 a{
     text-decoration: none;
@@ -475,5 +475,8 @@ footer {
     .card img{
         height: 100%;
         width: auto;
+    }
+    .footer{
+        text-align: center;
     }
 }
